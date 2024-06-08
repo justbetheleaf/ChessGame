@@ -3,7 +3,7 @@
 package tec.chessgame;
 
 /**
- * Elaborado por Dayron Porras, Armando y Amanda Ramírez
+ * Elaborado por Dayron Porras, Armando y Amanda Ramirez
  * 
  */
 

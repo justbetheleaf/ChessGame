@@ -21,3 +21,10 @@ public class ChessBoard {
         return board[row][col];
     }
 }
+
+//pruebita 
+
+
+
+
+
