@@ -2,10 +2,8 @@
 
 package tec.chessgame;
 
-/**
- * Elaborado por Dayron Porras, Armando y Amanda Ramirez
- * 
- */
+/** Elaborado por 
+**/
 
 
 public class ChessGame {
@@ -35,37 +33,47 @@ public class ChessGame {
     }
 
     public boolean makeMove(Cell start, Cell end) {
-        // lógica de movimiento
-        return true;
+        Piece piece = start.getPiece();
+        if (piece != null && piece.isValidMove(start, end, board)) {
+            end.setPiece(piece);
+            start.setPiece(null);
+            return true;
+        }
+        return false;
     }
-
+    
+    //Verificar estado del juego
     public GameState checkGameState() {
-        // lógica para verificar estado del juego
+        
         return this.gameState;
+        
     }
-
+    
+   // Verificar  un jaque
     public boolean isCheck() {
-        // lógica para un jaque
+        
         return false;
     }
-
+    
+    //Verificar jaque mate
     public boolean isCheckmate(Player player) {
-        // lógica para verificar jaque mate
+       
         return false;
     }
-
+    // Verificar ahogado
     public boolean isStalemate(Player player) {
         // lgica para verificar ahogado
         return false;
     }
 
+    // Verificar hacer un enroque
     public boolean castle(Player player, boolean kingside) {
-        // lógica para enroque
+        
         return false;
     }
 
     public boolean requestDraw() {
-        //lógica para requestdraw
+       
         return false;
     }
 }
