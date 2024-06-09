@@ -2,7 +2,7 @@
 package tec.chessgame;
 
 public class ChessBoard {
-    private Cell[][] board;
+    private final Cell[][] board;
 
     public ChessBoard() {
         board = new Cell[8][8];

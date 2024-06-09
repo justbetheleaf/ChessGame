@@ -1,8 +1,8 @@
 package tec.chessgame;
 
 public class Cell {
-    private int row;
-    private int col;
+    private final int row;
+    private final int col;
     private Piece piece;
 
     public Cell(int row, int col) {

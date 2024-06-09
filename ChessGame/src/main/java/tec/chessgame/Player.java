@@ -2,7 +2,7 @@ package tec.chessgame;
 
 public class Player {
     private String name;
-    private Color color;
+    private final Color color;
 
     public Player(String name, Color color) {
         this.name = name;

@@ -10,6 +10,11 @@ public class King extends Piece {
     public King(Color color) {
         super(color);
     }
+    public Cell getCell() {
+        Cell cell = null;
+        return cell;
+    }
+    
     @Override
     public List<Cell> getMovePath(Cell actualPos, ChessBoard board){
         //capturar casilla derecha
@@ -38,4 +43,5 @@ public class King extends Piece {
             this.movePath.add(board.getCell(actualPos.getRow()-1,actualPos.getCol()-1));
         return this.movePath;
     }
+
 }

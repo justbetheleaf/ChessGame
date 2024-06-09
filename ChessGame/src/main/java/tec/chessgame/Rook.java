@@ -10,6 +10,11 @@ public class Rook extends Piece {
     public Rook(Color color) {
         super(color);
     }
+    public Cell getCell() {
+        Cell cell = null;
+        return cell;
+    }    
+    
     @Override
     public List<Cell> getMovePath(Cell actualPos, ChessBoard board) {
         this.movePath.clear();
