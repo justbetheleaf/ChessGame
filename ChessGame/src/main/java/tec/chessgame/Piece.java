@@ -6,11 +6,9 @@ import java.util.List;
 public abstract class Piece {
     protected Color color;
     List<Cell> movePath;
-
     public Piece(Color color) {
         this.color = color;
     }
-
     public Color getColor() {
         return color;
     }
@@ -22,21 +20,8 @@ public abstract class Piece {
         }
         return (!end.isOccupied() || end.getPiece().getColor() == Color.WHITE && movePath.contains(end));
     };
+    public boolean isValidCapture(Cell start, Cell end, ChessBoard board){
+        return isValidMove(start, end, board);
+    }
     public abstract List<Cell> getMovePath(Cell actualPos, ChessBoard board);
 }
-
-/**
-public class King extends Piece {
-    public King(Color color) {
-        super(color);
-    }
-
-
-    @Override
-    public boolean isValidMove(Cell start, Cell end, ChessBoard board) {
-        // Implementar lógica de movimiento del Rey
-        return true;
-    }
-}
-
-**/
