@@ -12,6 +12,6 @@ public class Knight extends Piece {
     }
     @Override
     public List<Cell> getMovePath(Cell actualPos, ChessBoard board){
-        return movePath;
+        return this.movePath;
     }
 }
