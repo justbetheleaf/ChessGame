@@ -45,4 +45,8 @@ public class ChessBoard {
     public Cell getCell(int row, int col) {
         return board[row][col];
     }
+    
+    public Cell[][] getBoard(){
+        return board;
+    }
 }

@@ -26,6 +26,25 @@ public class ChessGame {
         return instance;
     }
     
+    public static void main(String[] args){
+        Player white = new Player("Player 1", Color.WHITE);        
+        Player black = new Player("Player 2", Color.BLACK);
+        ChessGame game = new ChessGame();        
+        game.startGame(white, black);
+        
+        game.makeMove(game.board.getCell(1, 0), game.board.getCell(2, 0));
+        
+        Cell[][] board = game.board.getBoard();
+        
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[row].length; col++) {
+                System.out.print(board[row][col].getPiece() + " ");
+            }
+            System.out.println();
+        }
+        
+    }
+    
     //Empieza partida
     public void startGame(Player white, Player black) {
         this.whitePlayer = white;
